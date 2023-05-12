@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import './components/backgroundScene.css'
+import BackgroundScene from './components/BackgroundScene';
+import Weather from './components/Weather'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App test">
+        <BackgroundScene/>
+        <div className="card text-bg-dark bg-opacity-25 mb-3 centered">
+        <Weather/>
+         <footer>
+          This project was coded by Jasmin Carter and is 
+          <a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer"> open-sourced on github</a>
+        </footer>
+        </div>
     </div>
   );
 }
