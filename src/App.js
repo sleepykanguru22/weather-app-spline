@@ -9,8 +9,8 @@ function App() {
         <div className="card text-bg-dark bg-opacity-25 mb-3 centered">
         <Weather/>
          <footer>
-          This project was coded by Jasmin Carter and is 
-          <a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer"> open-sourced on github</a>
+          This project was coded by Jasmin Carter on
+          <a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer"> github</a>
         </footer>
         </div>
     </div>

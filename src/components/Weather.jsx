@@ -18,7 +18,13 @@ export default function Weather() {
   function search() {
     const apiKey = "2f78caf735126025fc091f38c586a31f";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(error => {
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = 'We could not locate your city. Please try again.';
+      const errDiv = document.getElementById('err');
+      errDiv.appendChild(errorMessage);
+      console.log(errorMessage);
+    });
   }
 
   function handleResponse(response) {
@@ -37,15 +43,17 @@ export default function Weather() {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="weather">
+        <div id="err"></div>
         <form onSubmit={handleSubmit}>
           <input
+          className="rounded"
             type="search"
             placeholder="Enter a city"
             autoFocus="on"
             onChange={handleCityChange}
           />
-          <button type="submit">Search</button>
+          <button className="btn btn-outline-info rounded-pill" type="submit">Search</button>
         </form>
         <div className="row">
           <div className="col-6">
@@ -76,17 +84,19 @@ export default function Weather() {
     );
   } else {
     return (
-      <div className="Weather">
+      <div className="weather">
+        <p id="err">Search a city...</p>
         <form onSubmit={handleSubmit}>
           <input
+            className="rounded"
             type="search"
             placeholder="Enter a city"
             autoFocus="on"
             onChange={handleCityChange}
           />
-          <button type="submit">Search</button>
+          <button className="btn btn-outline-info rounded-pill" type="submit">Search</button>
         </form>
-        <p>Loading...</p>
+        
       </div>
     );
   }
