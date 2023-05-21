@@ -47,7 +47,7 @@ export default function Weather() {
         <div id="err"></div>
         <form onSubmit={handleSubmit}>
           <input
-          className="rounded"
+          className="rounded mx-2"
             type="search"
             placeholder="Enter a city"
             autoFocus="on"
@@ -56,14 +56,15 @@ export default function Weather() {
           <button className="btn btn-outline-info rounded-pill" type="submit">Search</button>
         </form>
         <div className="row">
-          <div className="col-6">
-            <div className="clearfix">
+          <div className="col-1"></div>
+          <div className="col-3">
+            <div className="">
               <img
                 src={weatherData.iconUrl}
                 alt={weatherData.description}
-                className="float-left"
+                className=""
               />
-              <div className="float-left">
+              <div className="">
                 <strong>{weatherData.city}</strong>
                 <br />
                 <span className="text-capitalize">
@@ -72,8 +73,8 @@ export default function Weather() {
               </div>
             </div>
           </div>
-          <div className="col-6">
-            <ul>
+          <div className="col-7">
+            <ul className="details pt-5 text-start">
               <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
               <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {Math.round(weatherData.wind)} km/h</li>
@@ -88,7 +89,7 @@ export default function Weather() {
         <p id="err">Search a city...</p>
         <form onSubmit={handleSubmit}>
           <input
-            className="rounded"
+            className="rounded mx-2"
             type="search"
             placeholder="Enter a city"
             autoFocus="on"

@@ -15,4 +15,13 @@
 
 ul{
   list-style: none;
+ 
+}
+.details li{
+  padding-bottom: 20px;
+}
+.card{
+  width: 25rem;
+  padding-top: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
 }
