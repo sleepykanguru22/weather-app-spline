@@ -8,6 +8,7 @@ function App() {
         <BackgroundScene/>
         <div className="card text-bg-dark bg-opacity-25 mb-3 centered">
         <Weather/>
+        
          <footer>
           This project was coded by Jasmin Carter on
           <a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer"> github</a>
