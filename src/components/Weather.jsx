@@ -61,11 +61,7 @@ export default function Weather() {
           <div className="col-1"></div>
           <div className="col-3">
             <div className="">
-              {/* <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                className=""
-              /> */}
+           
                 <WeatherIcon code={weatherData.icon} size={100} />
               <div className="">
                 <strong>{weatherData.city}</strong>
