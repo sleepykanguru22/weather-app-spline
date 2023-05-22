@@ -11,6 +11,7 @@
 .App footer {
   font-size: 11px;
   margin: 20px 0;
+  padding-top: 0.5rem;
 }
 
 ul{
@@ -27,6 +28,7 @@ ul{
 }
 .card{
   width: 40%;
+  margin-top: 5rem;
   padding-top: 0.5rem;
   font-family: 'Roboto Mono', monospace;
 }
