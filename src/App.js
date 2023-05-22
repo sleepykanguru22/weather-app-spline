@@ -10,8 +10,8 @@ function App() {
         <Weather/>
         
          <footer>
-          This project was coded by Jasmin Carter on
-          <a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer"> github</a>
+          This project was coded by Jasmin Carter and is partly open-sourced on <span><a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer">github</a></span>
+          
         </footer>
         </div>
     </div>
