@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherIcon from "./WeatherIcon";
-
-
+import TemperatureConverter from "./TemperatureConverter";
+import WeatherForecast from "./WeatherForecast";
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState("");
@@ -73,12 +73,13 @@ export default function Weather() {
           </div>
           <div className="col-7">
             <ul className="details pt-5 text-start">
-              <li>Temperature: {Math.round(weatherData.temperature)}°C</li>
+              <li>Temperature:  <TemperatureConverter celsius={weatherData.temperature} /></li>
               <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {Math.round(weatherData.wind)} km/h</li>
             </ul>
           </div>
         </div>
+          <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
