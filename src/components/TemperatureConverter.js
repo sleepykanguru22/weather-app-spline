@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 export default function TemperatureConverter({ celsius }) {
   const [isCelsius, setIsCelsius] = useState(true);
 
@@ -16,12 +17,12 @@ export default function TemperatureConverter({ celsius }) {
   }
 
   return (
-    <div className="TemperatureConverter">
-      <span>{Math.round(getConvertedTemperature())}</span>
-      <span className="unit">{isCelsius ? '°C' : '°F'}</span>
-      <label className="switch">
-        <input type="checkbox" checked={isCelsius} onChange={toggleTemperature} />
-        <span className="slider round"></span>
+    <div className="TemperatureConverter d-flex align-items-center justify-content-end">
+      <span className="temperature">{Math.round(getConvertedTemperature())}</span>
+      <span className="unit mx-1">{isCelsius ? '°C' : '°F'}</span>
+      <label className="toggle-switch form-check form-switch">
+        <input type="checkbox" className="toggle-checkbox form-check-input" role="switch" id="flexSwitchCheckDefault" checked={isCelsius} onChange={toggleTemperature} />
+        <span className="toggle-switch-handle"></span>
       </label>
     </div>
   );

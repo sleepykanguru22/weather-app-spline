@@ -3,7 +3,7 @@ import Spline from '@splinetool/react-spline';
 
 export default function BackgroundScene() {
   const onStart = () => {
-    console.log('Spline scene started');
+    console.log('scene started');
     // Perform any additional actions or logic here
   };
 

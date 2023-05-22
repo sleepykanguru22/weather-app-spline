@@ -48,7 +48,7 @@ export default function WeatherForecast({ coordinates }) {
     <div className="WeatherForecast">
       {forecastData && (
         <div className="row">
-          {forecastData.slice(1, 6).map((dayData) => renderForecastDay(dayData))}
+          {forecastData.slice(1, 7).map((dayData) => renderForecastDay(dayData))}
         </div>
       )}
     </div>

@@ -15,13 +15,19 @@
 
 ul{
   list-style: none;
+  display: inline-block;
  
 }
 .details li{
   padding-bottom: 20px;
 }
+.details li:first-child {
+  display: inline-flex;
+  align-items: center;
+}
 .card{
-  width: 25rem;
+  width: 40%;
   padding-top: 0.5rem;
   font-family: 'Roboto Mono', monospace;
 }
+
