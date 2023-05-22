@@ -1,7 +1,18 @@
+
 import Spline from '@splinetool/react-spline';
-import './backgroundScene.css'
+
 export default function BackgroundScene() {
+  const onStart = () => {
+    console.log('Spline scene started');
+    // Perform any additional actions or logic here
+  };
+
   return (
-    <Spline scene="https://prod.spline.design/RqQvQKIwWNlohumT/scene.splinecode" className='test' />
+    <div>
+      <Spline
+        scene="https://prod.spline.design/RqQvQKIwWNlohumT/scene.splinecode"
+        onStart={onStart} className='test'
+      />
+    </div>
   );
 }
