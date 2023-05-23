@@ -1,11 +1,11 @@
 import './App.css';
 import './components/backgroundScene.css'
-// import BackgroundScene from './components/BackgroundScene';
+import Scene from './components/Scene';
 import Weather from './components/Weather'
 function App() {
   return (
     <div className="App test">
-        {/* <BackgroundScene/> */}
+        <Scene/>
         <div className="card text-bg-dark bg-opacity-25 mb-3 centered">
         <Weather/>
         
