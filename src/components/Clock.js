@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Clock() {
-  const [time, setTime] = useState(getFormattedTime());
-  const [date, setDate] = useState(getFormattedDate());
+const [time, setTime] = useState(getFormattedTime());
+const [date, setDate] = useState(getFormattedDate());
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(getFormattedTime());
+      setDate(getFormattedDate());
     }, 1000);
 
     return () => {
       clearInterval(interval);
-      console.log('test')
     };
   }, []);
 
@@ -31,12 +31,13 @@ export default function Clock() {
   }
 
   return (
-    <div className="clock text-sm-start px-5 pt-2">
-      <p>{time}</p>
-      <p>{date}</p>
+    <div className="clock">
+      <h1>{time}</h1>
+      <h2>{date}</h2>
     </div>
   );
 }
+
 
 
 
