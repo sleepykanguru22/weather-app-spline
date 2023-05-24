@@ -3,7 +3,7 @@
 }
 .centered {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -33,3 +33,15 @@ ul{
   font-family: 'Roboto Mono', monospace;
 }
 
+@media (max-width: 768px) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 80%;
+    margin-top: 2rem;
+  }
+}

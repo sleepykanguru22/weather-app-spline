@@ -1,8 +1,6 @@
-
-
 import Spline from '@splinetool/react-spline';
 
-export default function Scene() {
+export default function BgScreen() {
     const onStart = () => {
     console.log('scene started');
     // Perform any additional actions or logic here

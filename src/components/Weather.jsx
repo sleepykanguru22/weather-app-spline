@@ -24,7 +24,6 @@ export default function Weather() {
       errorMessage.textContent = 'We could not locate your city. Please try again.';
       const errDiv = document.getElementById('err');
       errDiv.appendChild(errorMessage);
-      console.log(errorMessage);
     });
   }
 
@@ -84,8 +83,8 @@ export default function Weather() {
     );
   } else {
     return (
-      <div className="weather">
-        <p id="err">Search a city...</p>
+      <div className="weather pt-1">
+        
         <form onSubmit={handleSubmit}>
           <input
             className="rounded mx-2"
@@ -95,6 +94,7 @@ export default function Weather() {
             onChange={handleCityChange}
           />
           <button className="btn btn-outline-info rounded-pill" type="submit">Search</button>
+        <p id="err"></p>
         </form>
         
       </div>

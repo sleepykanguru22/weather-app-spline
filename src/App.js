@@ -1,14 +1,15 @@
 import './App.css';
 import './components/backgroundScene.css'
-import Scene from './components/Scene';
 import Weather from './components/Weather'
+import Clock from './components/Clock';
+import BgScreen from './components/BgScreen';
 function App() {
   return (
     <div className="App test">
-        <Scene/>
+        <BgScreen/>
         <div className="card text-bg-dark bg-opacity-25 mb-3 centered">
+        <Clock/>
         <Weather/>
-        
          <footer>
           This project was coded by Jasmin Carter and is partly open-sourced on <span><a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer">github</a></span>
           
