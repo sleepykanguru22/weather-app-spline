@@ -31,9 +31,9 @@ const [date, setDate] = useState(getFormattedDate());
   }
 
   return (
-    <div className="clock">
-      <h1>{time}</h1>
-      <h2>{date}</h2>
+    <div className="clock text-sm-start px-5 pt-1">
+      <p>{time}</p>
+      <p>{date}</p>
     </div>
   );
 }
