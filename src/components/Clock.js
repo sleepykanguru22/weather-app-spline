@@ -11,6 +11,7 @@ export default function Clock() {
 
     return () => {
       clearInterval(interval);
+      console.log('test')
     };
   }, []);
 
