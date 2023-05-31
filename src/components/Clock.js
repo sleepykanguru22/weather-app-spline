@@ -14,14 +14,15 @@ const [date, setDate] = useState(getFormattedDate());
       clearInterval(interval);
     };
   }, []);
+  
 
   function getFormattedTime() {
     const date = new Date();
     const hours = date.getHours() % 12 || 12;
     const minutes = date.getMinutes().toString().padStart(2, '0');
     const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
-    const timezone = date.toLocaleString('en-US', { timeZoneName: 'short' }).split(' ')[2];
-    return `${hours}:${minutes} ${ampm} ${timezone}`;
+    // const timezone = date.toLocaleString('en-US', { timeZoneName: 'short' }).split(' ')[2];
+    return `${hours}:${minutes} ${ampm}`;
   }
 
   function getFormattedDate() {
