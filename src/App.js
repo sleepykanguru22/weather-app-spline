@@ -1,21 +1,40 @@
-import './App.css';
-import './components/backgroundScene.css'
-import Weather from './components/Weather'
-import Clock from './components/Clock';
-import NScene from './components/NScene';
-
+import "./App.css";
+import "./components/backgroundScene.css";
+import Weather from "./components/Weather";
+import Clock from "./components/Clock";
+import NScene from "./components/NScene";
+import { useState } from "react";
 function App() {
+  // const [isLoading, setIsLoading] = useState(true);
+  // const setLoadingState = (isLoading) => {
+  //   setIsLoading(isLoading);
+  // };
+  // useEffect(() => {
+  //   setIsLoading(false);
+  // }, []);
   return (
-    <div className="App">
-        <NScene/>
+    <>
+      <div className="App">
+        <NScene />
         <div className="card text-bg-dark bg-opacity-25 mb-3 centered">
-        <Clock/>
-        <Weather/>
-         <footer>
-          This project was coded by Jasmin Carter and is partly open-sourced on <span><a href="https://github.com/sleepykanguru22" target="_blank" rel="noreferrer">github</a></span>
-        </footer>
+          <Clock />
+          <Weather />
+          <footer>
+            This project was coded by Jasmin Carter and is partly open-sourced
+            on{" "}
+            <span>
+              <a
+                href="https://github.com/sleepykanguru22"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github
+              </a>
+            </span>
+          </footer>
         </div>
-    </div>
+      </div>
+    </>
   );
 }
 
